@@ -1,0 +1,3 @@
+test: 
+	laika
+.PHONY: test
