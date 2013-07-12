@@ -2,7 +2,7 @@
 var assert = require('assert');
 
 suite('Posts', function() {
-  ltest('in the server', function(done, server) {
+  test('in the server', function(done, server) {
     server.eval(function() {
       Posts.insert({title: 'hello title'});
       var docs = Posts.find().fetch();
@@ -15,7 +15,7 @@ suite('Posts', function() {
     });
   });
 
-  ltest('using both client and the server', function(done, server, client) {
+  test('using both client and the server', function(done, server, client) {
     server.eval(function() {
       Posts.find().observe({
         added: addedNewPost
@@ -34,7 +34,7 @@ suite('Posts', function() {
     });
   });
 
-  ltest('using two client', function(done, server, c1, c2) {
+  test('using two client', function(done, server, c1, c2) {
     c1.eval(function() {
       Posts.find().observe({
         added: addedNewPost
