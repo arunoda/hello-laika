@@ -6,3 +6,5 @@ before_install:
   - "curl -L http://git.io/3l-rRA | /bin/sh"
 services:
   - mongodb
+env: 
+  - LAIKA_OPTIONS="-t 10000 -D"
