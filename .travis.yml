@@ -7,4 +7,4 @@ before_install:
 services:
   - mongodb
 env: 
-  - LAIKA_OPTIONS="-t 10000 -D"
+  - LAIKA_OPTIONS="-t 5000"
