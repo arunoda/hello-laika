@@ -34,7 +34,7 @@ suite('Posts', function() {
     });
   });
 
-  test('using two client', function(done, server, c1, c2) {
+  test('using two clients', function(done, server, c1, c2) {
     c1.eval(function() {
       Posts.find().observe({
         added: addedNewPost
